@@ -1,0 +1,151 @@
+.modal {
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.50);
+    cursor: pointer;
+    padding: 30px;
+    overflow-y: auto;
+    display: flex;
+}
+
+.modal_main {
+    position: relative;
+    margin: auto;
+    cursor: default;
+}
+
+.modal_close {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    top: 12px;
+    right: 12px;
+    position: absolute;
+    outline: 1px solid transparent;
+    padding: 0;
+    line-height: 0;
+    border-radius: 3px;
+}
+
+.modal_close:focus-visible {
+    outline-color: grey;
+}
+
+.detail {
+    background: #fff url('../img/likemen.png') no-repeat bottom right;
+    background-size: 150px;
+    max-width: 780px;
+    border-radius: 16px;
+    box-shadow: 0px 10px 50px 0px rgba(4, 0, 49, 0.10);
+    padding: 36px 36px 80px;
+}
+
+.detail_header {
+    display: grid;
+    grid-template-columns: 101px 1fr; 
+    gap: 12px 20px;
+    margin-bottom: 32px;
+}
+
+.detail_logo {
+    width: 100%;
+    max-height: 101px;
+    grid-row: 1 / 3;
+    align-self: center;
+    justify-self: start;
+}
+
+.detail_company {
+    font-size: 32px;
+    letter-spacing: 0.64px;
+    align-self: end;
+    justify-self: start;
+}
+
+.detail_title {
+    font-weight: 400;
+    font-size: 20px;
+    align-self: start;
+    justify-self: start;
+    border-radius: 4px;
+    background-color: #eaecff;
+    padding: 5px 10px;
+}
+
+.detail_main{
+    display: flex;
+    margin-bottom: 32px;
+    gap: 20px;
+}
+.detail_description{
+    max-width: 465px;
+    line-height: 140%;
+}
+.detail_fields{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 4px;
+}
+.detail_field{
+    padding: 3px 10px;
+    border-radius: 30px;
+    background-color: #EAECFF;
+}
+.detail_resume{
+    line-height: 140%;
+}
+
+@media (max-width: 940px) {
+    .detail {
+        max-width: 680px;
+        padding: 24px 24px 72px;
+        background-size: 110px;
+    }
+
+    .detail_main {
+        gap: 10px;
+    }
+
+    .detail_description {
+        max-width: 418px;
+    }
+}
+
+@media (max-width: 640px) {
+    .modal {
+        padding: 30px 15px;
+    }
+
+    .detail {
+        padding: 24px 15px;
+        background-size: 80px;
+    }
+
+    .detail_header {
+        grid-template-columns: 60px 1fr;
+        gap: 4px 8px;
+        margin-bottom: 24px;
+    }
+
+    .detail_company {
+        font-size: 20px;
+        letter-spacing: 0.4px;
+    }
+
+    .detail_title {
+        font-size: 12px;
+    }
+
+    .detail_main {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+
+    .detail_description{
+        max-width: 100%;
+    }
+
+}
